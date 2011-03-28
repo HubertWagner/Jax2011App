@@ -1,0 +1,2 @@
+serviceClass: com.accenture.jax2011.client.GreetingService
+path: 356A4964BACF1DC6E129BBB4B22E9B73.gwt.rpc
