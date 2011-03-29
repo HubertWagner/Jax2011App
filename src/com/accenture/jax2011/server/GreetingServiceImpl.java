@@ -26,9 +26,23 @@ public class GreetingServiceImpl extends RemoteServiceServlet implements
 		// Escape data from the client to avoid cross-site script vulnerabilities.
 		input = escapeHtml(input);
 		userAgent = escapeHtml(userAgent);
+		
+		this.writeToDB(input, userAgent);
+		
 
 		return "Hello, " + input + "!<br><br>I am running " + serverInfo
 				+ ".<br><br>It looks like you are using:<br>" + userAgent;
+	}
+	
+	public void writeToDB(String name, String value){
+		
+		try {
+			AwsConsoleApp.writeToDb(name, value);
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	/**
