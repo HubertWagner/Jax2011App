@@ -1,2 +1,3 @@
 # Module jax_2011
 # RPC service class, partial path of RPC policy file
+com.accenture.jax2011.client.GreetingService, 356A4964BACF1DC6E129BBB4B22E9B73.gwt.rpc
